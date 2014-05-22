@@ -24,13 +24,12 @@
 	if(is_uploaded_file($_FILES['upfile']['tmp_name']))
 	{
 		$upfile = $_FILES["upfile"];
-		$name= substr(str_shuffle(abcdefghijkmnpqrstwxyz23456789),0,6); 
+		$name= substr(str_shuffle(abcdefghijkmnpqrstwxyz23456789),0,6).'.jpg'; //获取文件后缀比较麻烦，所以直接全用了jpg
 		$type = $upfile["type"];
 		$size = $upfile["size"];
 		$tmp_name = $upfile["tmp_name"];
 		$error = $upfile["error"];
-
-		$max_file_size = 2000000;//限制文件大小为300KB内
+		$max_file_size = 2000000;//限制文件大小
 		if($max_file_size < $size)
 		//检查文件大小
 		{
@@ -62,7 +61,8 @@ HTML;
                 <strong>上传成功!</strong>
               </div>
 HTML;
-			$imgurl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'files/'.$name;
+			$imgurl = 'http://imglink.qiniudn.com/files/'.$name; //使用七牛CDN加速
+			//$imgurl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'files/'.$name; //直接使用当前网址
 			echo <<< HTML
 			<section class='box well'>
   <table class="table table-striped table-bordered table-condensed">
