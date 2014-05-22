@@ -12,4 +12,5 @@
 
 
 本程序可运行于大部分PHP空间，为了防止目录爆满，建议使用CRON定时清理。
+DEMO： [http://img.hengtian.biz/](http://img.hengtian.biz/)
 
