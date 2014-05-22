@@ -1,6 +1,6 @@
 ## 临时贴图 ##
 
-本程序参考 参考 (http://faceair.net/)和 [helloxz](https://github.com/helloxz/up)</a>  构建。
+本程序参考 参考 [faceair](http://faceair.net/) 和 [helloxz](https://github.com/helloxz/up)</a>  构建。
 
 本人不懂代码，都是拼出来的，让各位见笑了。
 
